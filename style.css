@@ -1,0 +1,114 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chat container */
+.chat-container {
+    width: 100%;
+    max-width: 500px; /* Maximum width of the chatbox */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+}
+
+/* Chatbox (where messages appear) */
+#chatbox {
+    height: 70%; /* Takes up 70% of the chat container's height */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat message styling */
+#chatbox div {
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+#chatbox .user {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+}
+
+#chatbox .ai {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Typing effect for AI */
+#chatbox .ai.typing {
+    color: #007bff;
+    font-style: italic;
+}
+
+/* Input box styles */
+input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Send button styles */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Character Animation */
+.character {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 120px;
+    height: 250px;
+    background-image: url('https://example.com/your-girl-animation.gif'); /* Replace with your animated gif or character image */
+    background-size: cover;
+    background-position: center;
+    animation: moveCharacter 5s ease-in-out infinite;
+}
+
+/* Keyframes for character movement */
+@keyframes moveCharacter {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    50% {
+        transform: translateY(-10px); /* Small upward movement */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
